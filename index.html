@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MerchAura — Premium Custom College Merchandise | New Delhi</title>
+<meta name="description" content="Custom college t-shirt printing, hoodies, varsity jackets, jerseys and event merchandise for college clubs, societies, fests and startups. Pan-India delivery. Get free mockups." />
+<meta name="theme-color" content="#ffd93d" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600,700,800&display=swap" />
+<style>
+:root{
+  --black:#111111;
+  --cream:#fffcf2;
+  --yellow:#ffd93d;
+  --yellow-deep:#ffc700;
+  --blue:#2f5eff;
+  --blue-deep:#1c3fd6;
+  --pink:#ff5c8a;
+  --green:#3ddc84;
+  --white:#ffffff;
+  --display:'Clash Display',serif;
+  --body:'General Sans',sans-serif;
+  --ease:cubic-bezier(.2,.9,.3,1.2);
+  --shadow:6px 6px 0 var(--black);
+  --shadow-sm:4px 4px 0 var(--black);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body); background:var(--cream); color:var(--black); overflow-x:hidden; -webkit-font-smoothing:antialiased;}
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none;}
+::selection{background:var(--black); color:var(--yellow);}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important; transition-duration:.01ms !important;}}
+
+.wrap{max-width:1280px; margin:0 auto; padding:0 32px;}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase;
+  font-weight:800; color:var(--black); background:var(--white); border:2px solid var(--black); border-radius:100px;
+  padding:6px 14px 6px 10px; margin-bottom:20px; box-shadow:var(--shadow-sm);
+}
+.eyebrow .dot{width:8px; height:8px; border-radius:50%; background:var(--pink); border:1.5px solid var(--black);}
+.section-head{max-width:640px; margin-bottom:48px;}
+.section-head h2{font-family:var(--display); font-weight:600; font-size:clamp(32px,4.6vw,52px); line-height:1.02; letter-spacing:-.01em;}
+.section-head p{font-size:16.5px; line-height:1.6; color:#3a3a3a; margin-top:14px; max-width:520px; font-weight:500;}
+section{position:relative;}
+.mark{background:var(--yellow); padding:0 6px; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
+.mark.blue{background:var(--blue); color:#fff;}
+.mark.pink{background:var(--pink); color:#fff;}
+
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .6s var(--ease), transform .6s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+.reveal-pop{opacity:0; transform:scale(.85) rotate(var(--rot,0deg)); transition:opacity .55s var(--ease), transform .55s var(--ease);}
+.reveal-pop.in{opacity:1; transform:scale(1) rotate(var(--rot,0deg));}
+
+.btn{
+  display:inline-flex; align-items:center; gap:8px; font-weight:800; font-size:14.5px; letter-spacing:.01em;
+  padding:15px 26px; border-radius:100px; border:2.5px solid var(--black); box-shadow:var(--shadow-sm);
+  transition:transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.btn:active{transform:translate(2px,2px); box-shadow:2px 2px 0 var(--black);}
+.btn-primary{background:var(--yellow); color:var(--black);}
+.btn-primary:hover{transform:translate(-2px,-2px); box-shadow:8px 8px 0 var(--black);}
+.btn-blue{background:var(--blue); color:#fff;}
+.btn-blue:hover{transform:translate(-2px,-2px); box-shadow:8px 8px 0 var(--black);}
+.btn-outline{background:var(--white); color:var(--black);}
+.btn-outline:hover{transform:translate(-2px,-2px); box-shadow:8px 8px 0 var(--black);}
+.btn-arrow{transition:transform .3s var(--ease);}
+.btn:hover .btn-arrow{transform:translateX(4px) rotate(-8deg);}
+
+#progress{position:fixed; top:0; left:0; height:4px; background:var(--pink); width:0%; z-index:9999; border-right:3px solid var(--black);}
+
+.nav-shell{position:fixed; top:16px; left:0; width:100%; z-index:1000; display:flex; justify-content:center; padding:0 20px;}
+header{
+  width:100%; max-width:1180px; display:flex; align-items:center; justify-content:space-between;
+  background:var(--white); border:2.5px solid var(--black); border-radius:100px; padding:10px 10px 10px 22px;
+  box-shadow:var(--shadow-sm); transition:box-shadow .3s;
+}
+.logo{font-family:var(--display); font-weight:700; font-size:21px; letter-spacing:-.02em; display:flex; align-items:center; gap:6px;}
+.logo .dotbox{width:10px; height:10px; background:var(--pink); border:2px solid var(--black); border-radius:3px; display:inline-block;}
+nav.links{display:flex; gap:26px; font-size:14px; font-weight:700;}
+nav.links a{position:relative;}
+nav.links a:hover{color:var(--blue);}
+.hamburger{display:none; flex-direction:column; gap:4px; width:22px;}
+.hamburger span{height:2.5px; background:var(--black); border-radius:2px;}
+@media (max-width:920px){nav.links{display:none;} .hamburger{display:flex;}}
+
+.hero{padding-top:140px; padding-bottom:70px; background:var(--blue); position:relative; overflow:hidden; border-bottom:3px solid var(--black);}
+.hero .eyebrow{background:var(--yellow);}
+.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center; position:relative; z-index:2;}
+.hero-content{grid-column:1; grid-row:1;}
+.hero-grid > .reveal-pop{grid-column:2; grid-row:1 / span 2;}
+.hero-badges-outer{grid-column:1; grid-row:2; margin-top:8px;}
+h1.headline{font-family:var(--display); font-weight:600; font-size:clamp(42px,6.6vw,84px); line-height:1.0; letter-spacing:-.02em; color:#fff;}
+.hero-sub{font-size:17px; color:rgba(255,255,255,.85); max-width:440px; margin-top:22px; line-height:1.6; font-weight:600;}
+.hero-ctas{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+.hero-badges{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap;}
+.mini-badge{background:var(--white); border:2.5px solid var(--black); border-radius:14px; padding:10px 16px; box-shadow:var(--shadow-sm); font-size:13px; font-weight:800; display:flex; align-items:center; gap:8px;}
+.mini-badge b{font-family:var(--display); font-size:16px;}
+.mini-badge.dark{background:var(--black); color:#fff; border-color:var(--black);}
+.mini-badge.dark b{color:var(--yellow);}
+
+/* Hero visual: WhatsApp-style chat mockup replacing the old polaroid collage */
+.chat-mock-wrap{display:flex; justify-content:center;}
+.phone{background:var(--black); border-radius:32px; padding:12px; box-shadow:var(--shadow); max-width:300px; width:100%; border:2.5px solid var(--black);}
+.phone-screen{background:#f0f3ff; border-radius:20px; overflow:hidden; min-height:380px; display:flex; flex-direction:column;}
+.phone-head{background:var(--blue-deep); color:#fff; padding:14px 16px; font-family:var(--display); font-weight:600; font-size:14px; display:flex; align-items:center; gap:10px;}
+.phone-head .av{width:28px; height:28px; border-radius:50%; background:var(--pink); color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;}
+.phone-body{padding:16px; display:flex; flex-direction:column; gap:8px; font-size:13px; flex:1; min-height:290px;}
+.chat-bubble{max-width:80%; padding:9px 12px; border-radius:10px; line-height:1.4; position:relative;}
+.chat-bubble.in{background:#fff; align-self:flex-start; border-bottom-left-radius:2px; color:#111;}
+.chat-bubble.in .chat-time{color:#999;}
+.chat-bubble.out{background:var(--pink); align-self:flex-end; border-bottom-right-radius:2px; color:#fff;}
+.chat-bubble.out .chat-time{color:rgba(255,255,255,.75);}
+.chat-time{display:block; font-size:9.5px; margin-top:3px; text-align:right;}
+@media (max-width:960px){
+  .hero{padding-top:110px; padding-bottom:36px;}
+  .hero .eyebrow{margin-bottom:12px;}
+  .hero-grid{grid-template-columns:1fr; display:flex; flex-direction:column;}
+  .hero-content{order:1;}
+  .hero-sub{margin-top:12px;}
+  .hero-ctas{margin-top:18px;}
+  .hero-grid > .reveal-pop{order:2; margin-top:14px;}
+  .hero-badges-outer{order:3; margin-top:12px;}
+  .hero-badges{margin-top:14px;}
+}
+
+.marquee{background:var(--black); overflow:hidden; padding:16px 0; border-bottom:3px solid var(--black);}
+.marquee .track{display:flex; gap:40px; white-space:nowrap; animation:mscroll 22s linear infinite;}
+.marquee .track span{font-family:var(--display); font-weight:600; font-size:17px; color:var(--yellow); display:flex; align-items:center; gap:14px;}
+.marquee .track span::after{content:"★"; color:var(--pink); font-size:13px;}
+@keyframes mscroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+.logos-section{background:var(--cream); padding:90px 0 80px; border-bottom:3px solid var(--black);}
+
+.why{padding:100px 0; background:var(--blue); border-bottom:3px solid var(--black); color:#fff;}
+.why .section-head h2{color:#fff;}
+.why .section-head p{color:rgba(255,255,255,.85);}
+.why .eyebrow{background:var(--yellow);}
+.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+.why-card{
+  position:relative; background:var(--white); color:var(--black); border:2.5px solid var(--black);
+  border-radius:18px; padding:28px 24px 26px; box-shadow:var(--shadow); overflow:hidden;
+  transform:rotate(var(--tilt, 0deg));
+}
+.why-card:nth-child(4n+1){--tilt:-1.6deg;}
+.why-card:nth-child(4n+2){--tilt:1.3deg;}
+.why-card:nth-child(4n+3){--tilt:-1deg;}
+.why-card:nth-child(4n+4){--tilt:1.8deg;}
+.why-card::before{
+  content:""; position:absolute; top:-30px; right:-30px; width:100px; height:100px; border-radius:50%;
+  background:var(--accent, var(--yellow)); opacity:.16;
+}
+.why-stat{
+  position:absolute; top:16px; right:18px; font-family:var(--display); font-weight:700; font-size:22px;
+  color:var(--accent, var(--yellow)); -webkit-text-stroke:1.5px var(--black); z-index:2;
+}
+.why-icon{
+  position:relative; z-index:2; width:56px; height:56px; border-radius:14px; background:var(--accent, var(--yellow));
+  border:2.5px solid var(--black); display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+  box-shadow:3px 3px 0 var(--black);
+}
+.why-icon svg{width:28px; height:28px; stroke:var(--black);}
+.why-card h3{position:relative; z-index:2; font-family:var(--display); font-size:19px; font-weight:600; margin-bottom:6px;}
+.why-card p{position:relative; z-index:2; font-size:13.5px; color:#444; line-height:1.5; font-weight:500;}
+@media (max-width:960px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr;} .why-card{transform:rotate(0deg);}}
+
+.products{padding:100px 0; background:var(--cream); border-bottom:3px solid var(--black);}
+.product-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.product-card{background:var(--white); border:2.5px solid var(--black); border-radius:18px; overflow:hidden; position:relative; box-shadow:var(--shadow); transition:transform .2s var(--ease), box-shadow .2s var(--ease);}
+.product-card:hover{transform:translate(-3px,-3px); box-shadow:9px 9px 0 var(--black);}
+.product-visual{aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; background:linear-gradient(150deg,var(--pc1),var(--pc2)); border-bottom:2.5px solid var(--black); position:relative;}
+.product-visual svg{width:48%;}
+.new-badge{position:absolute; top:10px; right:10px; background:var(--pink); border:2px solid var(--black); border-radius:100px; padding:4px 10px; font-size:10px; font-weight:800; color:#fff; transform:rotate(6deg);}
+.product-info{padding:16px 18px;}
+.product-info h3{font-family:var(--display); font-size:18px; font-weight:600;}
+.product-info p{font-size:12.5px; color:#555; margin-top:3px; font-weight:500;}
+@media (max-width:1080px){.product-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){
+  .product-grid{gap:12px;}
+  .product-info{padding:12px 14px;}
+  .product-info h3{font-size:15px;}
+  .product-info p{font-size:11px;}
+}
+
+.process{padding:100px 0; background:var(--pink); border-bottom:3px solid var(--black); color:#fff;}
+.process .section-head h2{color:#fff;}
+.process .section-head p{color:rgba(255,255,255,.85);}
+.process .eyebrow{background:var(--white);}
+
+.timeline{position:relative; max-width:640px; margin:0 auto;}
+.timeline::before{
+  content:""; position:absolute; left:27px; top:8px; bottom:8px; width:3px;
+  background:repeating-linear-gradient(180deg, rgba(255,255,255,.55) 0 10px, transparent 10px 20px);
+}
+.t-step{position:relative; display:flex; gap:22px; padding-bottom:44px;}
+.t-step:last-child{padding-bottom:0;}
+.t-icon{
+  position:relative; z-index:2; flex-shrink:0; width:56px; height:56px; border-radius:16px;
+  background:var(--white); border:2.5px solid var(--black); box-shadow:var(--shadow-sm);
+  display:flex; align-items:center; justify-content:center; transform:rotate(var(--tilt, -3deg));
+}
+.t-icon svg{width:26px; height:26px; stroke:var(--black); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+.t-num{
+  position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:50%; background:var(--yellow);
+  border:2px solid var(--black); display:flex; align-items:center; justify-content:center;
+  font-family:var(--display); font-weight:700; font-size:11px; color:var(--black); transform:rotate(calc(var(--tilt, -3deg) * -1));
+}
+.t-content{padding-top:6px;}
+.t-content h3{font-family:var(--display); font-weight:600; font-size:19px; margin-bottom:6px;}
+.t-content p{font-size:14px; line-height:1.55; color:rgba(255,255,255,.82); font-weight:500; max-width:420px;}
+.t-step:nth-child(odd) .t-icon{--tilt:-3deg;}
+.t-step:nth-child(even) .t-icon{--tilt:3deg;}
+@media (max-width:560px){
+  .timeline::before{left:23px;}
+  .t-icon{width:48px; height:48px; border-radius:14px;}
+  .t-icon svg{width:22px; height:22px;}
+  .t-step{gap:16px; padding-bottom:36px;}
+  .t-content h3{font-size:17px;}
+}
+
+.stats{padding:70px 0; background:var(--black);}
+.stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center;}
+.stat b{font-family:var(--display); font-size:clamp(34px,4.6vw,54px); font-weight:600; display:block; color:var(--yellow);}
+.stat span{font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#fff;}
+@media (max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr); gap:32px;}}
+
+/* ---------- GALLERY — reimagined for mobile, horizontal frames ---------- */
+.gallery{padding:100px 0 90px; background:var(--cream); border-bottom:3px solid var(--black); overflow:hidden;}
+.gallery .wrap{overflow:visible;}
+.gallery-head-row{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:44px;}
+
+.g-rows{display:flex; flex-direction:column; gap:20px;}
+.g-row{overflow:hidden; width:100%; -webkit-mask-image:linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image:linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);}
+.g-track{display:flex; align-items:stretch; gap:16px; width:max-content; animation:grscroll 24s linear infinite;}
+.g-row.reverse .g-track{animation-direction:reverse;}
+.g-row:hover .g-track, .g-row:active .g-track{animation-play-state:paused;}
+@keyframes grscroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+.g-card{
+  position:relative; flex-shrink:0; width:280px; aspect-ratio:16/10; border-radius:16px; overflow:hidden;
+  border:2.5px solid var(--black); box-shadow:var(--shadow-sm); background:var(--white);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), filter .35s;
+}
+.g-card:hover{transform:translateY(-6px) scale(1.02); box-shadow:8px 8px 0 var(--black); z-index:3;}
+.g-frame{width:100%; height:100%; display:flex; align-items:flex-end; overflow:hidden; position:relative;}
+.g-frame img{width:100%; height:100%; object-fit:cover; transition:transform .5s var(--ease);}
+.g-card:hover .g-frame img{transform:scale(1.06);}
+.g-frame.placeholder{align-items:center; justify-content:center; flex-direction:column; gap:6px;}
+.g-frame.placeholder span{font-size:11px; font-weight:700; color:rgba(0,0,0,.4); font-family:var(--body);}
+.g-tag{
+  position:absolute; left:10px; bottom:10px; z-index:2; font-family:var(--display); font-weight:600; font-size:12.5px;
+  color:#fff; background:rgba(17,17,17,.6); backdrop-filter:blur(3px); padding:5px 12px; border-radius:100px;
+  border:1.5px solid rgba(255,255,255,.35); max-width:calc(100% - 20px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.g-card::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.55), transparent 45%); pointer-events:none;}
+
+.g-cta{display:flex; justify-content:center; margin-top:44px;}
+.g-cta .btn{}
+
+@media (max-width:760px){
+  .g-card{width:240px;}
+  .g-rows{gap:14px;}
+}
+@media (max-width:480px){
+  .g-card{width:208px;}
+}
+
+.testimonials{padding:100px 0; background:var(--blue); border-bottom:3px solid var(--black); color:#fff; overflow:hidden;}
+.testimonials .section-head h2{color:#fff;}
+.testimonials .eyebrow{background:var(--pink); color:#fff;}
+.t-track-wrap{overflow:hidden; margin:0 -32px; padding:0 32px;}
+.t-track{display:flex; gap:20px; animation:tscroll 22s linear infinite;}
+.t-track:hover{animation-play-state:paused;}
+@keyframes tscroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+.t-card{min-width:320px; max-width:320px; background:var(--white); color:var(--black); border:2.5px solid var(--black); border-radius:16px 16px 16px 4px; padding:24px; box-shadow:var(--shadow-sm); position:relative;}
+.t-stars{color:var(--pink); font-size:14px; margin-bottom:12px; letter-spacing:2px;}
+.t-card p{font-size:14.5px; line-height:1.55; color:#333; margin-bottom:18px; font-weight:500;}
+.t-person{display:flex; align-items:center; gap:10px;}
+.t-avatar{width:38px; height:38px; border-radius:50%; border:2px solid var(--black); background:linear-gradient(140deg,var(--a1),var(--a2)); flex-shrink:0;}
+.t-person b{font-size:13.5px; display:block;}
+.t-person span{font-size:11.5px; color:#666;}
+
+.faq{padding:100px 0; background:var(--cream); border-bottom:3px solid var(--black);}
+.faq-list{max-width:760px;}
+.faq-item{background:var(--white); border:2.5px solid var(--black); border-radius:14px; margin-bottom:14px; box-shadow:var(--shadow-sm); overflow:hidden;}
+.faq-q{width:100%; display:flex; justify-content:space-between; align-items:center; padding:20px 22px; font-family:var(--display); font-size:17px; font-weight:600; text-align:left; gap:16px;}
+.faq-q .plus{width:26px; height:26px; border-radius:50%; background:var(--yellow); border:2px solid var(--black); position:relative; flex-shrink:0; transition:transform .3s var(--ease);}
+.faq-q .plus::before,.faq-q .plus::after{content:""; position:absolute; background:var(--black); top:50%; left:50%; transform:translate(-50%,-50%);}
+.faq-q .plus::before{width:10px; height:2px;}
+.faq-q .plus::after{width:2px; height:10px; transition:opacity .3s;}
+.faq-item.open .plus{background:var(--pink); transform:rotate(180deg);}
+.faq-item.open .plus::after{opacity:0;}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .4s var(--ease);}
+.faq-a p{padding:0 22px 22px; font-size:14px; color:#444; line-height:1.6; font-weight:500;}
+
+.final-cta{padding:130px 0; background:var(--yellow); text-align:center; position:relative; overflow:hidden; border-bottom:3px solid var(--black);}
+.final-cta h2{font-family:var(--display); font-weight:600; font-size:clamp(34px,5.6vw,72px); line-height:1.03; max-width:840px; margin:0 auto 28px;}
+.final-cta .sub{color:#333; font-size:16px; max-width:440px; margin:0 auto 34px; font-weight:600;}
+.final-cta .btns{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+
+footer{background:var(--black); color:#fff; padding:64px 0 26px;}
+.footer-top{display:grid; grid-template-columns:1.6fr 1fr 1fr 1.2fr; gap:32px; padding-bottom:44px;}
+.footer-brand .logo{color:#fff; margin-bottom:12px;}
+.footer-brand .logo .dotbox{background:var(--yellow);}
+.footer-brand p{color:rgba(255,255,255,.55); font-size:13.5px; max-width:260px; line-height:1.6;}
+.footer-col h4{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--yellow); margin-bottom:14px; font-weight:700;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{font-size:13.5px; color:rgba(255,255,255,.75);}
+.footer-col a:hover{color:var(--yellow);}
+.footer-social{display:flex; gap:10px; margin-top:16px;}
+.footer-social a{width:36px; height:36px; border-radius:50%; border:2px solid #fff; display:flex; align-items:center; justify-content:center;}
+.footer-social a:hover{background:var(--yellow); border-color:var(--yellow);}
+.footer-social a:hover svg{stroke:var(--black);}
+.footer-social svg{width:15px; height:15px; stroke:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12px; color:rgba(255,255,255,.4);}
+@media (max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.footer-top{grid-template-columns:1fr;}}
+
+@media (max-width:760px){
+  .wrap{padding:0 20px;}
+  .why,.products,.process,.gallery,.testimonials,.faq,.logos-section,.final-cta{padding:70px 0;}
+}
+
+/* ---------- clients marquee (3 rows, alternating direction) ---------- */
+.client-rows{display:flex; flex-direction:column; gap:2px; margin-top:8px;}
+.client-row{overflow:visible; width:100%; padding:3px 0; -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);}
+.client-track{display:flex; align-items:center; gap:36px; width:max-content; animation:crscroll 20s linear infinite;}
+.client-row.reverse .client-track{animation-direction:reverse;}
+.client-item{
+  display:flex; align-items:center; justify-content:center; height:88px; flex-shrink:0;
+  padding:14px 22px; background:var(--white); border:1.5px solid rgba(17,17,17,.12); border-radius:16px;
+  box-shadow:0 2px 10px rgba(17,17,17,.06);
+  transform:rotate(var(--tilt, 0deg));
+}
+.client-item:nth-child(4n+1){--tilt:-2deg;}
+.client-item:nth-child(4n+2){--tilt:1.6deg;}
+.client-item:nth-child(4n+3){--tilt:-1deg;}
+.client-item:nth-child(4n+4){--tilt:2.2deg;}
+.client-item img{height:52px; width:auto; display:block;}
+.client-placeholder{
+  display:flex; align-items:center; gap:12px; height:76px; padding:0 20px; flex-shrink:0;
+  border:2px dashed rgba(17,17,17,.25); border-radius:16px; background:rgba(255,255,255,.5);
+  transform:rotate(var(--tilt, 0deg));
+}
+.client-placeholder .swatch{width:40px; height:40px; border-radius:9px; border:2px solid var(--black); flex-shrink:0;}
+.client-placeholder span{font-family:var(--display); font-weight:600; font-size:14px; color:rgba(17,17,17,.55); white-space:nowrap;}
+@keyframes crscroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+@media (max-width:640px){
+  .client-item{height:72px; padding:11px 16px;}
+  .client-item img{height:40px;}
+  .client-track{gap:24px;}
+}
+@media (prefers-reduced-motion:reduce){.client-track{animation:none;} .g-track{animation:none;}}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div class="nav-shell">
+  <header id="siteHeader">
+    <a href="#" class="logo"><span class="dotbox"></span>MerchAura</a>
+    <nav class="links">
+      <a href="#logos">Colleges</a>
+      <a href="#process">How It Works</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#products">Products</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary" style="padding:11px 20px; font-size:13.5px;">Get a Quote</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="dot"></span> Not a Printer. A Merch Partner.</div>
+      <div class="reveal" data-reveal><h1 class="headline">Merch That Everyone <span class="mark">Actually</span> Wants To Wear.</h1></div>
+      <div class="reveal" data-reveal><p class="hero-sub">Premium custom apparel for college clubs, societies, fests and startups — designed with you, built to be worn long after the fest ends.</p></div>
+      <div class="reveal" data-reveal>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary" id="heroPrimaryCta">Get a Quote <span class="btn-arrow">→</span></a>
+          <a href="#gallery" class="btn btn-outline">Explore Our Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-pop" data-reveal>
+      <div class="chat-mock-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-head"><div class="av">M</div>MerchAura</div>
+            <div class="phone-body" id="heroChatBody"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal hero-badges-outer" data-reveal>
+      <div class="hero-badges">
+        <div class="mini-badge dark"><b>500+</b>Clubs</div>
+        <div class="mini-badge dark"><b>50K+</b>Delivered</div>
+        <div class="mini-badge dark"><b>Pan</b>India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track" id="topMarquee"></div>
+</div>
+
+<!-- CLIENTS -->
+<section class="logos-section" id="logos">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="section-head" style="margin:0 auto 40px; text-align:center; max-width:640px;">
+        <div class="eyebrow" style="margin-left:auto; margin-right:auto;">Trusted Pan-India</div>
+        <h2>Worn by India&apos;s most creative campuses.</h2>
+        <p style="margin-left:auto; margin-right:auto;">From DTU to NSUT, MAIT to IIT Jammu — 500+ clubs and societies have put their name on our merch.</p>
+      </div>
+    </div>
+  </div>
+  <div class="reveal-pop" data-reveal>
+    <div class="client-rows" id="clientRows"></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="section-head">
+        <div class="eyebrow">How It Works</div>
+        <h2>From idea to fest-ready.</h2>
+        <p>A real process, not a runaround — here&apos;s exactly what happens after you reach out.</p>
+      </div>
+    </div>
+    <div class="timeline" id="processStrip"></div>
+  </div>
+</section>
+
+<!-- GALLERY — redesigned -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="gallery-head-row">
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="eyebrow">Our Work</div>
+          <h2>Real drops, from real fests.</h2>
+          <p>Real merch from real fests — every campus, every club.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal-pop" data-reveal>
+    <div class="g-rows" id="galleryRows"></div>
+  </div>
+  <div class="wrap">
+    <div class="g-cta">
+      <a href="#contact" class="btn btn-primary">Start Your Own Drop <span class="btn-arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats-grid" id="statsGrid"></div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="section-head">
+        <div class="eyebrow">The Lineup</div>
+        <h2>Merch worth <span class="mark blue">stealing</span>.</h2>
+        <p>Custom college t-shirt printing, hoodies, jerseys and more — every piece built for fests, socials and everyday campus wear.</p>
+      </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="section-head">
+        <div class="eyebrow">Why Clubs Pick Us</div>
+        <h2>No surprises. Just great merch, on time.</h2>
+      </div>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="section-head">
+        <div class="eyebrow">Reviews</div>
+        <h2>What club heads actually say.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="t-track-wrap">
+    <div class="t-track" id="tTrack"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="reveal" data-reveal>
+      <div class="section-head">
+        <div class="eyebrow">Questions</div>
+        <h2>Everything you&apos;re wondering about.</h2>
+      </div>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;">Start Your Merch Project</div>
+    <div class="reveal" data-reveal><h2>Let&apos;s Make Your College The Next One Everyone Notices.</h2></div>
+    <p class="sub">Free mockups, no obligation. Tell us about your club and we&apos;ll get back within 24 hours.</p>
+    <div class="btns">
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-blue">Get My Quote <span class="btn-arrow">→</span></a>
+      <a href="#" class="btn btn-outline">Get Free Mockups</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="dotbox"></span>MerchAura</a>
+        <p>Premium custom apparel for India&apos;s college clubs, societies, fests and startups. Designed for memories, built for fests.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://wa.me/91XXXXXXXXXX" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 1 1-4-7.2L21 3l-1.5 4.4A8.4 8.4 0 0 1 21 11.5Z"/><path d="M8 10.5c.5 2.5 2 4 4.5 4.5"/></svg></a>
+          <a href="mailto:hello@merchaura.in" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul><li><a href="#products">Products</a></li><li><a href="#process">How It Works</a></li><li><a href="#gallery">Our Work</a></li><li><a href="#logos">Colleges</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul><li><a href="#products">Hoodies</a></li><li><a href="#products">Varsity Jackets</a></li><li><a href="#products">Jerseys</a></li><li><a href="#products">Oversized Tees</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul><li><a href="https://wa.me/91XXXXXXXXXX">+91 XXXXX XXXXX</a></li><li><a href="mailto:hello@merchaura.in">hello@merchaura.in</a></li><li><a href="#">New Delhi, India</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MerchAura. All rights reserved.</span>
+      <span>Custom College Merchandise · College T-Shirt Printing India · Society &amp; Club Merch</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   DATA — edit these arrays to change site copy/content
+============================================================ */
+const SITE = { whatsapp: "91XXXXXXXXXX", email: "hello@merchaura.in" };
+
+const MARQUEE_WORDS = ["NEW DROP","500+ CLUBS OUTFITTED","PAN INDIA DELIVERY","FREE MOCKUPS","NO HIDDEN CHARGES","BUILT FOR FESTS"];
+
+const CLIENT_NAMES = [
+  "DTU Fest Committee","NSUT Music Society","MAIT Dramatics","VIPS Placement Cell",
+  "Ramaiah Startup Cell","MAIMS Sports Club","IGDTUW Design Club","BPIT Fest Core Team",
+  "Lady Irwin Culturals","ANDC Literary Society","SSCBS Finance Club","UMIT Robotics",
+  "NLU Sonepat Moot Society","Maharaja Agrasen Fest","Swami Shraddhanand Society",
+  "IIT Jammu Tech Fest","Delhi Tech University","Kirori Mal College"
+];
+const CLIENT_COLORS = ["#ffb3c6","#8fd3ff","#c8f7d4","#ffe08a","#e0c8ff","#ffd9b3"];
+
+const PRODUCTS = [
+  { name:"Oversized Tee", desc:"Drop-shoulder, heavyweight", c1:"#ffb3c6", c2:"#ff5c8a", badge:"NEW" },
+  { name:"Classic Tee", desc:"Everyday fit, screen print", c1:"#8fd3ff", c2:"#2f5eff" },
+  { name:"Hoodie", desc:"Fleece-lined, embroidered", c1:"#ffe08a", c2:"#ffc700", badge:"HOT" },
+  { name:"Varsity Jacket", desc:"Wool body, leather sleeves", c1:"#d8d8d8", c2:"#8a8a8a" },
+  { name:"Jersey", desc:"Sublimation print", c1:"#c8f7d4", c2:"#3ddc84" },
+  { name:"Polo", desc:"Embroidered crest", c1:"#ffd9b3", c2:"#ff9d4d" },
+  { name:"Cap", desc:"Structured embroidery", c1:"#e0c8ff", c2:"#a35cff" },
+  { name:"Tote Bag", desc:"Screen printed canvas", c1:"#b3ffe0", c2:"#3ddcb0" }
+];
+
+const WHY_US = [
+  { title:"Premium Fabrics", desc:"220–260 GSM cotton and fleece — the kind that survives fifty washes and every fest.", icon:"fabric", accent:"#ffd93d", stat:"260GSM" },
+  { title:"Design Assistance", desc:"Our in-house designers turn your club's vibe into print-ready art, free with every order.", icon:"design", accent:"#ff5c8a", stat:"FREE" },
+  { title:"Fast Delivery", desc:"Pan-India shipping with fest-deadline production timelines — no last-minute panic.", icon:"delivery", accent:"#3ddc84", stat:"12D" },
+  { title:"No Hidden Charges", desc:"One transparent quote up front. What we say is what you pay.", icon:"charges", accent:"#8fd3ff", stat:"₹0*" }
+];
+const ICONS = {
+  fabric: '<path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/>',
+  design: '<circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/>',
+  delivery: '<path d="M4 17h9V6H4v11zM13 10h4l3 3v4h-7v-7z"/><circle cx="7.5" cy="18" r="1.5"/><circle cx="17.5" cy="18" r="1.5"/>',
+  charges: '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/>'
+};
+
+const PROCESS = [
+  { title:"Tell us your idea", desc:"WhatsApp us your club name, event and rough headcount — takes two minutes.", icon:"chat" },
+  { title:"Receive custom designs", desc:"Our designers send you 2–3 mockup directions, free of charge.", icon:"design" },
+  { title:"Approve a sample", desc:"We produce a physical sample so you see and feel it before bulk production.", icon:"sample" },
+  { title:"Production", desc:"Your full order goes into production with a confirmed delivery date.", icon:"production" },
+  { title:"Delivered across India", desc:"Packed and shipped to your campus, hostel or event venue — pan India.", icon:"delivery" }
+];
+const PROCESS_ICONS = {
+  chat: '<path d="M4 5h16v11H8l-4 4V5z"/>',
+  design: '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
+  sample: '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>',
+  production: '<rect x="3" y="9" width="18" height="11" rx="1"/><path d="M7 9V6a5 5 0 0 1 10 0v3"/>',
+  delivery: '<path d="M3 16h9V6H3v10zM12 10h4l3 3v3h-7v-6z"/><circle cx="6.5" cy="18.5" r="1.6"/><circle cx="16.5" cy="18.5" r="1.6"/>'
+};
+
+const STATS = [
+  { value:500, suffix:"+", label:"College Clubs" },
+  { value:50, suffix:"K+", label:"Products Delivered" },
+  { value:100, suffix:"+", label:"Campuses" },
+  { value:4.9, suffix:"★", label:"Average Rating", decimal:true }
+];
+
+// Gallery: club/category per photo + a category tag used for filter chips.
+// Point "image" at your real file in gallery/testimonial{n}.jpg — if it 404s,
+// a labeled placeholder frame shows instead so nothing looks broken pre-launch.
+const GALLERY_CLUBS = [
+  "Fest Committee, DTU","NSUT Music Society","MAIT Dramatics","VIPS Placement Cell",
+  "Ramaiah Startup Cell","MAIMS Sports Club","IGDTUW Design Club","BPIT Fest Core Team",
+  "Lady Irwin Culturals","ANDC Literary Society","SSCBS Finance Club","UMIT Robotics",
+  "NLU Sonepat Moot Society","Maharaja Agrasen Fest","Swami Shraddhanand Society","IIT Jammu Tech Fest"
+];
+const GALLERY_GRADIENTS = [
+  ["#ffb3c6","#ff5c8a"],["#8fd3ff","#2f5eff"],["#c8f7d4","#3ddc84"],
+  ["#ffe08a","#ffc700"],["#e0c8ff","#a35cff"],["#ffd9b3","#ff9d4d"]
+];
+const GALLERY_CAT_CYCLE = ["Hoodies","Tees","Jerseys","Jackets","Fest Kits"];
+
+// Extensions tried in order for every gallery photo — since your 30 photos
+// are a mix of .png and .jpg, each image tries every extension in this list
+// before falling back to the placeholder. Add more here if you use others.
+const IMAGE_EXTS = ["jpg", "jpeg", "png", "webp"];
+
+const GALLERY = Array.from({ length: 30 }, (_, i) => {
+  const n = i + 1;
+  const [c1, c2] = GALLERY_GRADIENTS[i % GALLERY_GRADIENTS.length];
+  return {
+    id: n,
+    base: `testimonial${n}`,
+    club: GALLERY_CLUBS[i % GALLERY_CLUBS.length],
+    category: GALLERY_CAT_CYCLE[i % GALLERY_CAT_CYCLE.length],
+    c1, c2
+  };
+});
+
+const TESTIMONIALS = [
+  { name:"Aarav Mehta", role:"Fest Head, DTU", text:"300 hoodies for our fest, and seniors kept theirs way past graduation. That's the real test.", a1:"#ffb3c6", a2:"#ff5c8a" },
+  { name:"Simran Kaur", role:"President, NSUT Music Society", text:"They turned our half-baked idea into something we were proud to wear on stage.", a1:"#8fd3ff", a2:"#2f5eff" },
+  { name:"Rohan Verma", role:"Placement Coordinator, VIPS", text:"No hidden charges, delivered three days early. Reliability that actually matters.", a1:"#c8f7d4", a2:"#3ddc84" },
+  { name:"Ananya Singh", role:"Cultural Secretary, Lady Irwin", text:"The varsity jackets became the most-Instagrammed thing at our fest.", a1:"#ffe08a", a2:"#ffc700" },
+  { name:"Kabir Anand", role:"Founder, Campus Startup Cell", text:"Merch that looked like a real brand, not a college project — on a founder budget.", a1:"#e0c8ff", a2:"#a35cff" },
+  { name:"Priya Raghunathan", role:"Sports Secretary, MAIMS", text:"Jersey fabric held up through an entire tournament season without fading.", a1:"#ffd9b3", a2:"#ff9d4d" }
+];
+
+const FAQS = [
+  { q:"What's the minimum order quantity?", a:"We typically work with orders of 25 pieces and above per design, which suits most club and society budgets. Smaller pilot runs can be discussed case by case." },
+  { q:"How long does production and delivery take?", a:"Standard timelines run 10–15 days from sample approval. For fest deadlines, we offer expedited production — just flag your event date when you reach out." },
+  { q:"Do you offer free mockups before we commit?", a:"Yes. Once you share your idea, our designers send 2–3 mockup directions at no cost, so you know exactly what you're approving." },
+  { q:"Can we see a physical sample before the full order?", a:"Always. We produce one physical sample for approval before bulk production begins, so there are no surprises when the full order arrives." },
+  { q:"Which cities do you deliver to?", a:"We ship pan-India — from campuses in Delhi NCR to colleges across the country. Delivery timelines vary slightly by location." },
+  { q:"What fabric and GSM do you use?", a:"Depending on the product, we use 220–260 GSM cotton for tees and hoodies, and breathable sublimation-print fabric for jerseys — all tested for repeated washing." },
+  { q:"Can each member get a different size in the same design?", a:"Yes, size-wise customization within one design is standard. Just share your sizing sheet when you place the order." },
+  { q:"Do you help design our logo or artwork?", a:"If your club doesn't have print-ready artwork, our designers can build it from scratch based on your college's identity and colours." },
+  { q:"What's included in 'no hidden charges'?", a:"Your quote covers production, printing/embroidery and standard delivery. Anything beyond that — like rush shipping — is flagged upfront, never added later." },
+  { q:"How do we start the process?", a:"Tap 'Get a Quote' to start a WhatsApp conversation, or fill the enquiry form. Tell us your club, rough headcount and event date, and we'll take it from there." }
+];
+
+/* ============================================================
+   RENDER
+============================================================ */
+
+// Hero chat mockup — looping WhatsApp-style conversation
+const HERO_CHAT_MESSAGES = [
+  { side: "in", text: "Hey! Need 300 hoodies for our fest 🔥", time: "10:41 AM" },
+  { side: "out", text: "On it — sending 3 mockup directions today, free of cost.", time: "10:42 AM" },
+  { side: "in", text: "That was fast 😳", time: "10:45 AM" },
+  { side: "out", text: "Sample ships tomorrow. Full order in 12 days.", time: "10:46 AM" }
+];
+(function playHeroChat(){
+  const container = document.getElementById("heroChatBody");
+  if (!container) return;
+  function loop(){
+    container.innerHTML = "";
+    let i = 0;
+    function addNext(){
+      if (i >= HERO_CHAT_MESSAGES.length){ setTimeout(loop, 1800); return; }
+      const m = HERO_CHAT_MESSAGES[i];
+      const div = document.createElement("div");
+      div.className = `chat-bubble ${m.side}`;
+      div.innerHTML = `${m.text}<span class="chat-time">${m.time}</span>`;
+      container.appendChild(div);
+      i++;
+      setTimeout(addNext, 900);
+    }
+    addNext();
+  }
+  loop();
+})();
+
+// Top marquee
+(function renderMarquee(){
+  const words = [...MARQUEE_WORDS, ...MARQUEE_WORDS, ...MARQUEE_WORDS];
+  document.getElementById("topMarquee").innerHTML = words.map(w => `<span>${w}</span>`).join("");
+})();
+
+// Client rows (3 rows, alternating direction). Checks if clients/client{n}.png exists.
+function buildClientRow(names, offset){
+  return names.map((name, i) => ({
+    id: offset + i + 1,
+    name,
+    filename: `client${offset + i + 1}.png`,
+    color: CLIENT_COLORS[(offset + i) % CLIENT_COLORS.length]
+  }));
+}
+const CLIENT_ROWS = [
+  buildClientRow(CLIENT_NAMES.slice(0,6), 0),
+  buildClientRow(CLIENT_NAMES.slice(6,12), 6),
+  buildClientRow(CLIENT_NAMES.slice(12,18), 12)
+];
+
+function renderClientItem(c){
+  return `
+    <div class="client-item" data-fallback-wrap>
+      <img src="clients/${c.filename}" alt="${c.name}"
+           onerror="this.closest('[data-fallback-wrap]').innerHTML = '<div class=\\'client-placeholder\\'><div class=\\'swatch\\' style=\\'background:${c.color}\\'></div><span>${c.filename}</span></div>'">
+    </div>`;
+}
+(function renderClients(){
+  const el = document.getElementById("clientRows");
+  el.innerHTML = CLIENT_ROWS.map((row, idx) => {
+    const items = [...row, ...row];
+    const reverse = idx === 1;
+    return `<div class="client-row ${reverse ? "reverse" : ""}"><div class="client-track">${items.map(renderClientItem).join("")}</div></div>`;
+  }).join("");
+})();
+
+// Products
+(function renderProducts(){
+  document.getElementById("productGrid").innerHTML = PRODUCTS.map(p => `
+    <div class="reveal-pop" data-reveal>
+      <div class="product-card">
+        <div class="product-visual" style="--pc1:${p.c1}; --pc2:${p.c2};">
+          ${p.badge ? `<div class="new-badge">${p.badge}</div>` : ""}
+          <svg viewBox="0 0 100 100"><path d="M30 15 L20 25 L28 32 L32 28 L32 88 L68 88 L68 28 L72 32 L80 25 L70 15 L60 20 A12 12 0 0 1 40 20 Z" fill="#111" opacity="0.85"/></svg>
+        </div>
+        <div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p></div>
+      </div>
+    </div>`).join("");
+})();
+
+// Why us
+(function renderWhy(){
+  document.getElementById("whyGrid").innerHTML = WHY_US.map(w => `
+    <div class="reveal" data-reveal>
+      <div class="why-card" style="--accent:${w.accent};">
+        <div class="why-stat">${w.stat}</div>
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[w.icon]}</svg></div>
+        <h3>${w.title}</h3><p>${w.desc}</p>
+      </div>
+    </div>`).join("");
+})();
+
+// Process
+(function renderProcess(){
+  document.getElementById("processStrip").innerHTML = PROCESS.map((step, i) => `
+    <div class="t-step reveal" data-reveal>
+      <div class="t-icon">
+        <svg viewBox="0 0 24 24">${PROCESS_ICONS[step.icon]}</svg>
+        <div class="t-num">${i+1}</div>
+      </div>
+      <div class="t-content">
+        <h3>${step.title}</h3><p>${step.desc}</p>
+      </div>
+    </div>`).join("");
+})();
+
+// Stats with count-up
+(function renderStats(){
+  const el = document.getElementById("statsGrid");
+  el.innerHTML = STATS.map((s, i) => `
+    <div class="stat">
+      <b data-target="${s.value}" data-suffix="${s.suffix}" data-decimal="${!!s.decimal}">0${s.suffix}</b>
+      <span>${s.label}</span>
+    </div>`).join("");
+})();
+
+/* ---------- GALLERY render: filterable horizontal marquee rows ---------- */
+// Tries each extension in IMAGE_EXTS in turn for a given <img>. Only after
+// every extension has failed does it swap in the gradient placeholder —
+// this is what lets a folder mixing .png and .jpg "just work" per photo.
+function tryNextExt(img, base, extIndex, c1, c2){
+  if (extIndex >= IMAGE_EXTS.length){
+    const frame = img.closest(".g-frame");
+    if (frame){
+      frame.classList.add("placeholder");
+      frame.style.background = `linear-gradient(150deg, ${c1}, ${c2})`;
+      frame.innerHTML = `<span>${base}.*</span>`;
+    }
+    return;
+  }
+  img.onerror = () => tryNextExt(img, base, extIndex + 1, c1, c2);
+  img.src = `gallery/${base}.${IMAGE_EXTS[extIndex]}`;
+}
+
+function renderGalleryCard(item){
+  return `
+    <div class="g-card">
+      <div class="g-frame">
+        <img data-base="${item.base}" data-c1="${item.c1}" data-c2="${item.c2}"
+             alt="${item.club} merchandise photo" loading="lazy">
+      </div>
+      <div class="g-tag">${item.club}</div>
+    </div>`;
+}
+
+function renderGallery(){
+  // split into 4 rows
+  const ROW_COUNT = 4;
+  const rows = Array.from({ length: ROW_COUNT }, () => []);
+  GALLERY.forEach((item, i) => rows[i % ROW_COUNT].push(item));
+
+  const rowsEl = document.getElementById("galleryRows");
+  rowsEl.innerHTML = rows.map((row, idx) => {
+    const looped = [...row, ...row];
+    const reverse = idx % 2 === 1;
+    return `<div class="g-row ${reverse ? "reverse" : ""}"><div class="g-track">${looped.map(renderGalleryCard).join("")}</div></div>`;
+  }).join("");
+
+  // kick off the extension-guessing load for every photo now that the
+  // <img> tags are actually in the DOM
+  rowsEl.querySelectorAll(".g-frame img[data-base]").forEach(img => {
+    tryNextExt(img, img.dataset.base, 0, img.dataset.c1, img.dataset.c2);
+  });
+}
+renderGallery();
+
+// Testimonials
+(function renderTestimonials(){
+  const looped = [...TESTIMONIALS, ...TESTIMONIALS];
+  document.getElementById("tTrack").innerHTML = looped.map(t => `
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <p>&quot;${t.text}&quot;</p>
+      <div class="t-person">
+        <div class="t-avatar" style="--a1:${t.a1}; --a2:${t.a2};"></div>
+        <div><b>${t.name}</b><span>${t.role}</span></div>
+      </div>
+    </div>`).join("");
+})();
+
+// FAQ accordion
+(function renderFaq(){
+  const el = document.getElementById("faqList");
+  el.innerHTML = FAQS.map((f, i) => `
+    <div class="faq-item" data-idx="${i}">
+      <button class="faq-q"><span>${f.q}</span><span class="plus"></span></button>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`).join("");
+
+  el.addEventListener("click", (e) => {
+    const btn = e.target.closest(".faq-q");
+    if (!btn) return;
+    const item = btn.closest(".faq-item");
+    const body = item.querySelector(".faq-a");
+    const isOpen = item.classList.contains("open");
+    // close all
+    el.querySelectorAll(".faq-item").forEach(it => {
+      it.classList.remove("open");
+      it.querySelector(".faq-a").style.maxHeight = "0px";
+    });
+    if (!isOpen){
+      item.classList.add("open");
+      body.style.maxHeight = body.scrollHeight + "px";
+    }
+  });
+})();
+
+/* ============================================================
+   BEHAVIOR: scroll progress, reveal-on-scroll, stat count-up
+============================================================ */
+
+// Scroll progress bar
+(function scrollProgress(){
+  const bar = document.getElementById("progress");
+  function onScroll(){
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = (Number.isFinite(scrolled) ? scrolled : 0) + "%";
+  }
+  document.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
+// Reveal on scroll
+(function revealOnScroll(){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll("[data-reveal]").forEach(el => io.observe(el));
+})();
+
+// Sticky mobile CTA: only appears once the hero's own "Get a Quote" button
+// has scrolled out of view, so it never duplicates a CTA already on screen.
+// Stat counters
+(function statCounters(){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      io.unobserve(entry.target);
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || "";
+      const decimal = el.dataset.decimal === "true";
+      let start = null;
+      const dur = 1400;
+      function step(ts){
+        if (!start) start = ts;
+        const progress = Math.min((ts - start) / dur, 1);
+        const val = target * progress;
+        el.textContent = (decimal ? val.toFixed(1) : Math.floor(val)) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll(".stat b[data-target]").forEach(el => io.observe(el));
+})();
+
+// Mobile hamburger -> simple scroll-to-nav fallback (opens links list via native anchor scroll)
+document.querySelector(".hamburger")?.addEventListener("click", () => {
+  document.getElementById("logos").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+</body>
+</html>
